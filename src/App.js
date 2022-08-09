@@ -9,16 +9,16 @@ function App() {
   const [txtLine2, setTxtLine2] = useState('');
   const [imagen, setImagen] = useState('');
 
-  const onChangeTxtLine1 = function (evento) {
-    setTxtLine1(evento.target.value)
+  const onChangeTxtLine1 = function (event) {
+    setTxtLine1(event.target.value)
   }
 
-  const onChangeTxtLine2 = function (evento) {
-    setTxtLine2(evento.target.value)
+  const onChangeTxtLine2 = function (event) {
+    setTxtLine2(event.target.value)
   }
 
-  const onChangeImagen = function (evento) {
-    setImagen(evento.target.value)
+  const onChangeImagen = function (event) {
+    setImagen(event.target.value)
   }
 
   
@@ -27,7 +27,7 @@ function App() {
     <div className="App">
 
       <select onChange={onChangeImagen}>
-        <option value="fire">Casa en llamas</option>
+        <option value="fire">Fire</option>
         <option value="futurama">Futurama</option>
         <option value="history">History Channel</option>
         <option value="matrix">Matrix</option>
