@@ -1,54 +1,53 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { useState } from "react";
+
+import { useState } from 'react';
+import './App.css';
+
 
 function App() {
-  //linea1 = variable
-  //setLinea1 = setter function
-  const [linea1, setLinea1] = useState('');
-  const [linea2, setLinea2] = useState('');
-  const [image, setImage] = useState('');
 
-  const onChangeLinea1 = function(evento){
-    //debugger;
-    //alert(evento.target.value)
-    setLinea1(evento.target.value);
+  const [txtLine1, setTxtLine1] = useState('');
+  const [txtLine2, setTxtLine2] = useState('');
+  const [imagen, setImagen] = useState('');
+
+  const onChangeTxtLine1 = function (evento) {
+    setTxtLine1(evento.target.value)
   }
 
-  const onChangeLinea2 = function(evento){
-    //debugger;
-    //alert(evento.target.value)
-    setLinea2(evento.target.value);
-  }  
+  const onChangeTxtLine2 = function (evento) {
+    setTxtLine2(evento.target.value)
+  }
 
-  const onChangeImage = function(evento){
-    setImage(evento.target.value);
-  } 
+  const onChangeImagen = function (evento) {
+    setImagen(evento.target.value)
+  }
 
+  
 
   return (
     <div className="App">
-      <select onChange={onChangeImage} name="" id="">
-        <option value="fire">House on fire</option>
+
+      <select onChange={onChangeImagen}>
+        <option value="fire">Casa en llamas</option>
         <option value="futurama">Futurama</option>
         <option value="history">History Channel</option>
         <option value="matrix">Matrix</option>
         <option value="philosoraptor">Philosoraptor</option>
         <option value="smart">Smart Guy</option>
-      </select>
-      <br />
-      <input onChange={onChangeLinea1} type="text" name="" id="" placeholder="Top text" />
-      <br />
-      <input onChange={onChangeLinea2} type="text" name="" id="" placeholder="Bottom text" />
-      <br />
+      </select> <br />
 
-      <div>
-        <span>{linea1}</span> <br />
-        <span>{linea2}</span> <br />
-        <img src={"/img/" + image + ".jpg"} />
-      </div>    
+      <input onChange={onChangeTxtLine1} type="text" placeholder="Top" /> <br />
+      <input onChange={onChangeTxtLine2} type="text" placeholder="Bottom" /> <br />
+      <button >Export</button>
+
+      <div className="meme" id="meme">
+        <span>{txtLine1}</span> <br />
+        <span>{txtLine2}</span>
+        <img src={"/img/" + imagen + ".jpg"} />
+      </div>
+
     </div>
   );
 }
+
 
 export default App;
