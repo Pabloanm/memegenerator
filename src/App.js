@@ -5,9 +5,9 @@ import { useState } from "react";
 function App() {
   //linea1 = variable
   //setLinea1 = setter function
-  const [linea1, setLinea1] = useState("Hola Mundo");
-  const [linea2, setLinea2] = useState("Hello World");
-  const [image, setImage] = useState("Hello World");
+  const [linea1, setLinea1] = useState('');
+  const [linea2, setLinea2] = useState('');
+  const [image, setImage] = useState('');
 
   const onChangeLinea1 = function(evento){
     //debugger;
@@ -44,7 +44,8 @@ function App() {
 
       <div>
         <span>{linea1}</span> <br />
-        <span>{linea2}</span>
+        <span>{linea2}</span> <br />
+        <img src={"/img/" + image + ".jpg"} />
       </div>    
     </div>
   );
